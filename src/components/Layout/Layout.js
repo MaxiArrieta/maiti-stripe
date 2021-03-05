@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-// import Header from '../Header'
 import { Div, Image, DivButton } from './styles'
 
 const Layout = ({ stipeData }) => {
@@ -17,8 +16,6 @@ const Layout = ({ stipeData }) => {
       }
     }
   `)
-
-  console.log(stipeData)
 
   useEffect(() => {
     setStripe(window.Stripe(process.env.STRIPE_PK))
@@ -40,7 +37,6 @@ const Layout = ({ stipeData }) => {
 
   return (
     <section>
-      {/* <Header /> */}
       <Div>
         <div>
           <Image fluid={image.childImageSharp.fluid} />
